@@ -2,7 +2,7 @@
 
 ***INSTALL***
 
-> git clone ...
+> git clone git@github.com:RomanVitiuk/BinanceAPI-test-case.git
 
 ## Go to to the root of project. If You clone project in home directory (***for example: /home/cool_user***), you can go to the root of project with next command:
 
