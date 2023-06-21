@@ -40,7 +40,7 @@ Run command from project root directory.
 
 This bash script will create database, csv file and insert first data into both of them. Script waiting 3 second and run web app with candlestick chart and pie chart.
 
-Then you can follow [link](http://http://127.0.0.1:8050/) to view result.
+Then you can follow [link](http://127.0.0.1:8050/) to view result.
 
 By default script collect data every 4 hour for symbol BTCUSDT.
 
