@@ -208,3 +208,6 @@ pip-selfcheck.json
 # databases
 crypto_db.sqlite
 candlestick_data.csv
+
+my_launcher.sh
+my_cron.sh
