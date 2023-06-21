@@ -26,9 +26,13 @@ Install requirements
 
 ## Next step make two files executable:
 
+Change file app_launcher.sh on line 3 and set your path to root of project (for example /home/cool_user/binanceapi)
+
 > chmod +x app_launcher.sh
 
 and
+
+Change file app_launcher.sh on line 3 and set your path to root of project (for example /home/cool_user/binanceapi)
 
 > chmod +x cron_job.sh
 

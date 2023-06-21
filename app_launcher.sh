@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /home/ramzes/stepic/BinanceAPI
+cd ~/BinanceAPI
 source venv/bin/activate
 python db_init.py
 python data_collector.py
