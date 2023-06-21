@@ -32,6 +32,37 @@ and
 
 > chmod +x cron_job.sh
 
+## Next step run application
+
+Run command from project root directory.
+
+> ./app_launcher.sh
+
+This bash script will create database, csv file and insert first data into both of them. Script waiting 3 second and run web app with candlestick chart and pie chart.
+
+By default script collect data every 4 hour for symbol BTCUSDT.
+
+If you need change this default values, for example set symbol ETHUSDT you can do this in file app_launcher.sh, all you need is set line 6 as shown below
+
+> python data_collector.py -s ETHUSDT
+
+or if you need set interval with 1 day
+
+> python data_collector.py -i 1d
+
+you can combine this parameters
+
+> python data_collector.py -i 1d -s ETHUSDT
+
+File data_collector.py can take two arguments, -s or --symbol: symbol and -i or --interval: interval.
+
+Interval need set with next definition (for hour and day):
+
+- 5h
+- 1d
+
+**But remember if you change interval, you need make change also in crontab file as shown in step above**
+
 ## Next step check cron status
 
 First of all make sure that your cron active:
@@ -64,32 +95,14 @@ After executing next command, a new file will be opened automatically
 
 Save file and exit from editor.
 
-## Next step run application
-
-Run command from project root directory
-
-> ./app_launcher.sh
-
-This bash script will create database, csv file and insert first data into both of them. Script waiting 3 second and run web app with candlestick chart and pie chart.
-
-By default script collect data every 4 hour for symbol BTCUSDT.
-
-If you need change this default values, for example set symbol ETHUSDT you can do this in file app_launcher.sh, all you need is set line 6 as shown below
-
-> python data_collector.py -s ETHUSDT
-
-or if you need set interval with 1 day
-
-> python data_collector.py -i 1d
-
-you can combine this parameters
-
-> python data_collector.py -i 1d -s ETHUSDT
-
-**But remember if you change interval, you need make change also in crontab file as shown in step above**
-
-## Next step run crontab
-
-> ./cron_job.sh
-
 This command will run script for collecting data every 4 hour and insert into database and csv file.
+
+*You can test crontab running to make sure the data is saving in database and csv file.*
+
+To do that run command, with instruction as above:
+
+> crontab -e
+
+> * * * * * /home/cool_user/binanceapi/cron_job.sh
+
+With this command data will be collecting every minute. If you just test cron work, you don`t need change app_launcher.sh
