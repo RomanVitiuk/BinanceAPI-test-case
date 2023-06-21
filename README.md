@@ -32,7 +32,7 @@ Change file app_launcher.sh on line 3 and set your path to root of project (for 
 
 and
 
-Change file app_launcher.sh on line 3 and set your path to root of project (for example /home/cool_user/binanceapi)
+Change file cron_job.sh on line 3 and set your path to root of project (for example /home/cool_user/binanceapi)
 
 > chmod +x cron_job.sh
 
